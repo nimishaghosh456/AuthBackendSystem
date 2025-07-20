@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "9d89f800-73b1-4a61-bef6-db3261f1ccaa",
+		"name": "AuthBackend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46907641",
+		"_collection_link": "https://nimisha-8906909.postman.co/workspace/nimisha's-Workspace~24578f34-d411-4383-8154-67445d06b8f8/collection/46907641-9d89f800-73b1-4a61-bef6-db3261f1ccaa?action=share&source=collection_link&creator=46907641"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/verify-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"identifier\": \"nimisha@example.com\",\r\n  \"otp\": \"270823\"   // replace this with the OTP printed in terminal\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/verify-otp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"nimisha@example.com\",\r\n  \"password\": \"test1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/protected",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/protected",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"protected"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/refresh-token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/refresh-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"refresh-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Nimisha\",\r\n  \"email\": \"nimisha@example.com\",\r\n  \"mobile\": \"9999999999\",\r\n  \"password\": \"test1234\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
